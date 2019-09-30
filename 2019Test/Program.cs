@@ -11,11 +11,12 @@ namespace _2019Test
             patternExample.TryMeOut();
 
             var asyncEnumeratorExample = new Async.AsyncExamples();
-
             var task = Task.Run(() => asyncEnumeratorExample.TryOutAsyncEnumeralbeAsync());
             var secondTask = Task.Run(() => asyncEnumeratorExample.TryOutAsyncEnumeralbeAsync());
-
             await Task.WhenAll(task, secondTask);
+
+            var rangeExample = new Ranges.RangeExample();
+            rangeExample.TrySimpleExample();
         }
     }
 }
